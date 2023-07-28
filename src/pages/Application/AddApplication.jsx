@@ -9,7 +9,7 @@ const AddApplication = () => {
 
             <div className='block'>
                 <div className='title'>Выберите регион: </div>
-                <SelectSearch/>
+                <SelectSearch placeholder='Регион'/>
             </div>
             <div className='block'>
                 <div className='title'>Выберите город: </div>
