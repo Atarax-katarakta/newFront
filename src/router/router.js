@@ -1,18 +1,19 @@
 import MainPage from "../pages/MainPage/MainPage";
-import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
 export const router = [
     {
         path: "/",
         element: <MainPage/>
     },
-    {
-        path: "/auth/register",
-        element: <RegisterPage/>
-    },
+
     {
         path: "/auth/login",
         element: <LoginPage/>
     },
+    {
+        path: "/profile",
+        element: <ProfilePage/>
+    }
 ]

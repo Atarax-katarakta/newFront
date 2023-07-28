@@ -12,14 +12,6 @@ const LoginPage = () => {
                     Войти через
                     <img src={gos} alt=""/>
                 </Button>
-                <Typography.Text>
-                    Еще нет аккаунта?
-                    <Typography.Link>
-                        <Link to={"/auth/register"}>
-                            Создать
-                        </Link>
-                    </Typography.Link>
-                </Typography.Text>
             </form>
         </div>
     );
