@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import SelectSearch from "../../components/SelectSearch/SelectSearch";
+import DropDown from "../../components/DropDown/DropDown";
 
 const AddApplication = () => {
     return (
@@ -19,6 +20,7 @@ const AddApplication = () => {
                 <div className='title'>Выберите направления: </div>
                 <SelectSearch/>
             </div>
+            <DropDown title={'Drop'} description={'ttttttttttttttttttt'}/>
         </div>
     );
 };
