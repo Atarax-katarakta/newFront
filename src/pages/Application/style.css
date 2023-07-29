@@ -17,6 +17,11 @@
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
+.page_application_first .links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 .credit_calculate {
   padding: 0 60px;
