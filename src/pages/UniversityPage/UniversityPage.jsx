@@ -4,8 +4,11 @@ import cls from "./UniversityPage.module.scss"
 import unik from "../../assets/kubsu.jpg"
 import {Typography} from "antd";
 import DropDown from "../../components/DropDown/DropDown";
+import {useGetUniversityQuery} from "../../redux/api/universityApi";
 
 const UniversityPage = () => {
+    const { data, error, isLoading } = useGetUniversityQuery(1);
+
     const universityInfo = {
         name: "Кубанский государственный университет",
         description:

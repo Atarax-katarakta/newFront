@@ -3,6 +3,7 @@ import cls from "./MainPage.module.scss"
 import {Collapse, Menu, Typography} from "antd";
 import hero from "../../assets/hero.svg"
 import Suggestions from "../../components/Suggestions/Suggestions";
+import {useGetUniversityQuery} from "../../redux/api/universityApi";
 
 const {Panel} = Collapse
 const DropDown = ({title, description}) => {
@@ -16,6 +17,7 @@ const DropDown = ({title, description}) => {
     );
 };
 const MainPage = () => {
+
 
     const onClick = (e) => {
         console.log('click ', e);

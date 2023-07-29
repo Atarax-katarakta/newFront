@@ -11,11 +11,6 @@ const Navbar = () => {
             <div className={cls.info}>
                 <img src={logo} alt=""/>
                 <Typography.Link style={{fontFamily: 'Montserrat'}}>
-                    <Link to="/applications">
-                        Заявки
-                    </Link>
-                </Typography.Link>
-                <Typography.Link style={{fontFamily: 'Montserrat'}}>
                     <Link to="/application">
                         Подать заявку
                     </Link>

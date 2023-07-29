@@ -1,46 +1,36 @@
 .parent {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   gap: 20px;
+  grid-template-columns: 1fr 1fr;
 
-  & div {
-    border-radius: 10px;
+  div {
     padding: 20px;
+    gap: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
   .child1 {
-    background: rgb(142, 209, 45);
-    background: linear-gradient(135deg, rgba(142, 209, 45, 1) 0%, rgba(18, 23, 31, 1) 80%);
+    background-color: #B0D39B;
   }
-
   .child2 {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(195, 37, 37, 1) 74%);
+    background-color: #BDBFE6;
   }
-
   .child3 {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(195, 37, 37, 1) 74%);
-
-    & h1 {
-      color: var(--secondary);
-    }
+    background-color: #E4CFEB;
   }
-
   .child4 {
-    background: rgb(142, 209, 45);
-    background: linear-gradient(135deg, rgba(142, 209, 45, 1) 0%, rgba(141, 208, 47, 1) 12%, rgba(37, 98, 195, 1) 91%);
+    background-color: #EEB6B6;
   }
   .child5 {
-    background: rgb(100,58,99);
-    background: linear-gradient(135deg, rgba(100,58,99,1) 0%, rgba(195,37,37,1) 74%);
-
+    background-color: #A6C9E3;
   }
   .child6 {
-    background: rgb(141,147,52);
-    background: linear-gradient(135deg, rgba(141,147,52,1) 0%, rgba(167,37,195,1) 74%);
+    background-color: #E2E4AA;
   }
+}
+.slider {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  gap: 20px;
 }
