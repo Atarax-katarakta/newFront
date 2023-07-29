@@ -6,8 +6,9 @@ export const universityApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl: 'http://80.78.255.50/'}),
     endpoints: (builder) => ({
         getUniversity: builder.query({
-            query: (id) => `universities/${id}`
+            query: (id) => `filteredbyuniversities/?university_id=${id}&limit=1000`
         })
+
     }),
 })
 
