@@ -1,0 +1,38 @@
+.parent {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.parent div {
+  padding: 20px;
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.parent .child1 {
+  background-color: #B0D39B;
+}
+.parent .child2 {
+  background-color: #BDBFE6;
+}
+.parent .child3 {
+  background-color: #E4CFEB;
+}
+.parent .child4 {
+  background-color: #EEB6B6;
+}
+.parent .child5 {
+  background-color: #A6C9E3;
+}
+.parent .child6 {
+  background-color: #E2E4AA;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=Suggestions.module.css.map */

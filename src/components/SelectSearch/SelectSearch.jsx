@@ -2,12 +2,12 @@ import React from 'react';
 import cl from './SelectSearch.module.css';
 import {Select} from "antd";
 
-const SelectSearch = ({placeholder, options, disabled=false}) => {
-    const onChange = (value) => {
-        console.log(`selected ${value}`);
+const SelectSearch = ({placeholder, options, disabled=false, changeFunc}) => {
+    const onChange = (value, option) => {
+        changeFunc(value, option)
     };
     const onSearch = (value) => {
-        console.log('search:', value);
+        // console.log('search:', value);
     };
     return (
         <Select
@@ -21,6 +21,7 @@ const SelectSearch = ({placeholder, options, disabled=false}) => {
             }
             options={options}
             disabled={disabled}
+            style={{width: '100%'}}
         />
     );
 };
