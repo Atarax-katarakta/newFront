@@ -50,8 +50,8 @@ const AddApplication = () => {
                             : <div></div>
                         : numberStep === 2 ? selectCity && selectUniver && selectSpecialties ?
                                 <div className='links'>
-                                    <Link to={""}>Отправить заявку в учебное учреждение на бюджетной основе</Link>
-                                    <Link to={""}>Посмотреть варианты кредитов и шанс одобрения+</Link>
+                                    <Link to={"/upload"}>Отправить заявку в учебное учреждение на бюджетной основе</Link>
+                                    <Link to={"/credit_calculate"}>Посмотреть варианты кредитов и шанс одобрения+</Link>
                                 </div>
                                 : <div></div>
                             : <div></div>

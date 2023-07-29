@@ -4,6 +4,7 @@ import {Collapse, Menu, Typography} from "antd";
 import hero from "../../assets/hero.svg"
 import Suggestions from "../../components/Suggestions/Suggestions";
 import {useGetUniversityQuery} from "../../redux/api/universityApi";
+import HotLine from "../../components/HotLine/HotLine";
 
 const {Panel} = Collapse
 const DropDown = ({title, description}) => {
@@ -79,6 +80,8 @@ const MainPage = () => {
                 </Typography.Title>
                 <Suggestions/>
             </div>
+            <h2 style={{margin: '2rem 0'}}>Открытые линии с банками</h2>
+            <HotLine/>
         </div>
     );
 };

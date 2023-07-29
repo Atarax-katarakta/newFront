@@ -27,7 +27,7 @@ export const router = [
         element: <AddApplication/>
     },
     {
-        path: '/credit_calculate/:specid',
+        path: '/credit_calculate',
         element: <CalculateCredit/>
     },
     {
