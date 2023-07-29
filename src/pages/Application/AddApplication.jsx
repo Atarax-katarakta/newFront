@@ -8,6 +8,7 @@ import axios from "axios";
 import ApplicationCity from "./ApplicationCity";
 import ApplicationUniver from "./ApplicationUniver";
 import ApplicationSpecialties from "./ApplicationSpecialties";
+import {useGetAllTownQuery} from "../../redux/api/applicationService";
 
 class UniversityService {
     static async getAll() {
@@ -29,25 +30,25 @@ const AddApplication = () => {
         },
         {
             value: 'step2',
-            component: <ApplicationUniver setSelectFunc={(val) => setSelectUniver(val)}/>
+            component: <ApplicationUniver cityId={selectCity} setSelectFunc={(val) => setSelectUniver(val)}/>
         },
         {
             value: 'step3',
-            component: <ApplicationSpecialties setSelectFunc={(val) => setSelectSpecialties(val)}/>
+            component: <ApplicationSpecialties setSelectFunc={(val) => setSelectSpecialties(val)} univerId={selectUniver}/>
         }
     ]
-    const [numberStep, setNumber] = useState(1)
+    const [numberStep, setNumber] = useState(0)
     return (
         <div className='page_application_first'>
             <div className='h1'>Анкета</div>
             {steps[numberStep].component}
             {
-                numberStep === 1 ? selectCity ? <Button onClick={() => setNumber(numberStep + 1)}>Далее</Button>
+                numberStep === 0 ? selectCity ? <Button onClick={() => setNumber(numberStep + 1)}>Далее</Button>
                         : <div></div>
-                    : numberStep === 2 ? selectCity && selectUniver ?
+                    : numberStep === 1 ? selectUniver ?
                             <Button onClick={() => setNumber(numberStep + 1)}>Далее</Button>
                             : <div></div>
-                        : numberStep === 3 ? selectCity && selectUniver && selectSpecialties ?
+                        : numberStep === 2 ? selectCity && selectUniver && selectSpecialties ?
                                 <div className='links'>
                                     <Link to={""}>Отправить заявку в учебное учреждение на бюджетной основе</Link>
                                     <Link to={""}>Посмотреть варианты кредитов и шанс одобрения+</Link>
