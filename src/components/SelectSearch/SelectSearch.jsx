@@ -2,7 +2,7 @@ import React from 'react';
 import cl from './SelectSearch.module.css';
 import {Select} from "antd";
 
-const SelectSearch = ({placeholder, options}) => {
+const SelectSearch = ({placeholder, options, disabled=false}) => {
     const onChange = (value) => {
         console.log(`selected ${value}`);
     };
@@ -20,6 +20,7 @@ const SelectSearch = ({placeholder, options}) => {
                 (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
             }
             options={options}
+            disabled={disabled}
         />
     );
 };
