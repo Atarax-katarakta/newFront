@@ -16,7 +16,7 @@ const Navbar = () => {
                     </Link>
                 </Typography.Link>
                 <Typography.Link style={{fontFamily: 'Montserrat'}}>
-                    <Link to="/new">
+                    <Link to="/application">
                         Подать заявку
                     </Link>
                 </Typography.Link>

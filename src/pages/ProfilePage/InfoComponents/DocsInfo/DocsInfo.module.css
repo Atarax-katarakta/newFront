@@ -1,0 +1,14 @@
+.Docs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Docs .info {
+  display: flex;
+  justify-content: space-between;
+}
+.Docs .info svg {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=DocsInfo.module.css.map */
