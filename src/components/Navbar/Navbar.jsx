@@ -32,6 +32,9 @@ const Navbar = () => {
                         <Link to={"/auth/login"}>Войти</Link>
                     </Button>
                 }
+                {
+
+                }
             </div>
         </nav>
     );
