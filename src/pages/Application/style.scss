@@ -58,4 +58,99 @@
     }
 
   }
+  .banks{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    .bank{
+      .title{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        box-shadow: 2px 2px 12px rgba(0,0,0,.12);
+        align-items: center;
+
+        img.logo{
+          max-width: 100%;
+        }
+        .title_block{
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .title{
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 500;
+            box-shadow: none;
+            padding: 0;
+          }
+          .subtitle{
+            color: #6c6c6c;
+            font-size: 0.7rem;
+            font-weight: 400;
+            margin: 0;
+          }
+        }
+        .props{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          .prop{
+            padding: 5px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            color: #333;
+            height: max-content;
+            background-color:#eff1f4 ;
+          }
+        }
+        .btns{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          span.success{
+            padding: 5px 10px;
+            background-color: #34a901;
+            border-radius: 5px;
+            font-weight: 700;
+            color: white;
+          }
+        }
+        span.clicker{
+          color: var(--primary);
+          text-decoration: underline;
+          line-height: 150%;
+        }
+      }
+      .description{
+        tbody{
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: 12px;
+          tr{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            th{
+              text-align: right;
+              padding:5px 12px;
+              font-size: 1rem;
+              font-weight: 700;
+            }
+            td{
+              text-align: left;
+              padding:5px 12px;
+              font-size: 1rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+
+  }
 }
