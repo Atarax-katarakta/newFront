@@ -3,6 +3,7 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
 import AddApplication from "../pages/Application/AddApplication";
+import AddApplication_second from "../pages/Application/AddApplication_second";
 
 export const router = [
     {
@@ -21,5 +22,9 @@ export const router = [
     {
         path: '/application',
         element: <AddApplication/>
+    },
+    {
+        path: '/application/:regionid/:cityid/:specialtyid',
+        element: <AddApplication_second/>
     }
 ]

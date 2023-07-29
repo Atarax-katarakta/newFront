@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import {Route, Routes} from "react-router-dom";
 import {router} from "./router/router";
-
+import './styles/global.css'
 function App() {
     return (
         <>

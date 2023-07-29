@@ -2,6 +2,8 @@ import React from 'react';
 import './style.css';
 import SelectSearch from "../../components/SelectSearch/SelectSearch";
 import DropDown from "../../components/DropDown/DropDown";
+import {Button} from "antd";
+import {Link} from "react-router-dom";
 
 const AddApplication = () => {
     return (
@@ -20,7 +22,9 @@ const AddApplication = () => {
                 <div className='title'>Выберите направления: </div>
                 <SelectSearch/>
             </div>
-            <DropDown title={'Drop'} description={'ttttttttttttttttttt'}/>
+            <Link to='/application/1/1/1'>
+                Далее
+            </Link>
         </div>
     );
 };
