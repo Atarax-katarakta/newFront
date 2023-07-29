@@ -6,6 +6,7 @@ import MainInfo from "./InfoComponents/MainInfo/MainInfo";
 import DocsInfo from "./InfoComponents/DocsInfo/DocsInfo";
 import RequiestInfo from "./InfoComponents/RequestInfo/RequiestInfo";
 import UniversityRequest from "./InfoComponents/UniversityRequest/UniversityRequest";
+import Portfolio from "./Portfolio/Portfolio";
 
 export function getItem(label, key, icon, children, type) {
     return {
@@ -34,6 +35,10 @@ const internalPages = [
         key: 4,
         element: <UniversityRequest/>
     },
+    {
+        key: 5,
+        element: <Portfolio/>
+    },
 
 ]
 
@@ -45,6 +50,7 @@ const items = [
     ]),
     getItem('Обратная связь от университетов', '3'),
     getItem('Обраная связь от банков', '4'),
+    getItem('Портфолио', '5'),
 
 ];
 const ProfilePage = () => {

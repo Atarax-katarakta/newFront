@@ -4,6 +4,7 @@ import {Collapse, Menu, Typography} from "antd";
 import hero from "../../assets/hero.svg"
 import Suggestions from "../../components/Suggestions/Suggestions";
 import {useGetUniversityQuery} from "../../redux/api/universityApi";
+import {Link} from "react-router-dom";
 
 const {Panel} = Collapse
 const DropDown = ({title, description}) => {
@@ -78,6 +79,12 @@ const MainPage = () => {
                     Акции и спецпредложения
                 </Typography.Title>
                 <Suggestions/>
+            </div>
+            <div>
+                <Typography.Title>
+                    Еще не определились со специальностью?
+                    <Link to={"/survey"}>Пройти опрос</Link>
+                </Typography.Title>
             </div>
         </div>
     );

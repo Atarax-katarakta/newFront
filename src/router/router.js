@@ -7,6 +7,7 @@ import AddApplication_second from "../pages/Application/CalculateCredit";
 import UniversityPage from "../pages/UniversityPage/UniversityPage";
 import CalculateCredit from "../pages/Application/CalculateCredit";
 import UploadFiles from "../pages/Application/UploadFiles";
+import SurveyPage from "../pages/SurveyPage/SurveyPage";
 
 export const router = [
     {
@@ -37,5 +38,9 @@ export const router = [
     {
         path: "/upload",
         element: <UploadFiles/>
+    },
+    {
+        path: "/survey",
+        element: <SurveyPage/>
     }
 ]
