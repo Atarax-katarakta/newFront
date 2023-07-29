@@ -3,6 +3,7 @@ import cls from "./ProfilePage.module.scss"
 import {Avatar, Col, Menu, Row, Typography} from "antd";
 import {AppstoreOutlined, MailOutlined, SettingOutlined, UserOutlined} from '@ant-design/icons';
 import MainInfo from "./InfoComponents/MainInfo/MainInfo";
+import DocsInfo from "./InfoComponents/DocsInfo/DocsInfo";
 export function getItem(label, key, icon, children, type) {
     return {
         key,
@@ -17,6 +18,10 @@ const internalPages = [
     {
         key: 1,
         element: <MainInfo/>
+    },
+    {
+        key: 2,
+        element: <DocsInfo/>
     }
 ]
 
@@ -38,7 +43,7 @@ const items = [
 const ProfilePage = () => {
     const [selectedMenu, setSelectedMenu] = useState(1)
     const onClick = (e) => {
-        console.log(e.key);
+        setSelectedMenu(e.key)
     };
     return (
         <div className={cls.Profile}>
@@ -50,7 +55,7 @@ const ProfilePage = () => {
                     <div className={cls.label}>
                         <Avatar size={64} icon={<UserOutlined/>}/>
                         <Typography.Text>
-                            Григорий Иван Дебилович
+                            Григорьев Иван Денисович
                         </Typography.Text>
                     </div>
                     <Menu
@@ -69,9 +74,7 @@ const ProfilePage = () => {
                     span={18}
                     className={cls.info}
                 >
-                    {internalPages.map(item => (
-                        item.element
-                    ))}
+                    {internalPages[selectedMenu - 1].element}
                 </Col>
             </Row>
         </div>

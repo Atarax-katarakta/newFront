@@ -11,10 +11,11 @@ const MainInfo = () => {
             <div className={cls.profile}>
                 <Avatar size={128} icon={<UserOutlined/>}/>
                 <div className={cls.text}>
-                    <Title level={3}> Григорий Иван Дебилович</Title>
+                    <Title level={3}>Григорьев Иван Денисович</Title>
                     <Text>example@gmail.com</Text>
                     <Text>+7999999999</Text>
                 </div>
+
             </div>
         </div>
     );
