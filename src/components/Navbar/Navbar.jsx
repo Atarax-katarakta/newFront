@@ -9,7 +9,9 @@ const Navbar = () => {
     return (
         <nav className={cls.Navbar}>
             <div className={cls.info}>
-                <img src={logo} alt=""/>
+                <Link to={"/"}>
+                    <img src={logo} alt=""/>
+                </Link>
                 <Typography.Link style={{fontFamily: 'Montserrat'}}>
                     <Link to="/application">
                         Подать заявку
