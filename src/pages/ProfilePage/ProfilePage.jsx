@@ -4,6 +4,9 @@ import {Avatar, Col, Menu, Row, Typography} from "antd";
 import {AppstoreOutlined, MailOutlined, SettingOutlined, UserOutlined} from '@ant-design/icons';
 import MainInfo from "./InfoComponents/MainInfo/MainInfo";
 import DocsInfo from "./InfoComponents/DocsInfo/DocsInfo";
+import RequiestInfo from "./InfoComponents/RequestInfo/RequiestInfo";
+import UniversityRequest from "./InfoComponents/UniversityRequest/UniversityRequest";
+
 export function getItem(label, key, icon, children, type) {
     return {
         key,
@@ -22,7 +25,16 @@ const internalPages = [
     {
         key: 2,
         element: <DocsInfo/>
-    }
+    },
+    {
+        key: 3,
+        element: <UniversityRequest/>
+    },
+    {
+        key: 4,
+        element: <UniversityRequest/>
+    },
+
 ]
 
 
@@ -31,14 +43,9 @@ const items = [
         getItem('Основные данные', '1'),
         getItem('Личные документы', '2'),
     ]),
-    getItem('Ответы от университетов', 'sub2', <AppstoreOutlined/>, [
-        getItem('Приглашения', '3'),
-        getItem('Отказы', '4'),
-    ]),
-    getItem('Ответы от банков', 'sub4', <SettingOutlined/>, [
-        getItem('Одобрения', '5'),
-        getItem('Отказы', '6'),
-    ]),
+    getItem('Обратная связь от университетов', '3'),
+    getItem('Обраная связь от банков', '4'),
+
 ];
 const ProfilePage = () => {
     const [selectedMenu, setSelectedMenu] = useState(1)
@@ -60,9 +67,6 @@ const ProfilePage = () => {
                     </div>
                     <Menu
                         onClick={onClick}
-                        style={{
-                            width: 256,
-                        }}
                         defaultSelectedKeys={['1']}
                         defaultOpenKeys={['sub1']}
                         mode="inline"
