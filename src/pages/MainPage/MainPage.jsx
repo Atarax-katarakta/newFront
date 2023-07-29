@@ -3,6 +3,7 @@ import cls from "./MainPage.module.scss"
 import {Collapse, Menu, Typography} from "antd";
 import hero from "../../assets/hero.svg"
 import Suggestions from "../../components/Suggestions/Suggestions";
+import HotLine from "../../components/HotLine/HotLine";
 
 const {Panel} = Collapse
 const DropDown = ({title, description}) => {
@@ -77,6 +78,7 @@ const MainPage = () => {
                 </Typography.Title>
                 <Suggestions/>
             </div>
+            <HotLine/>
         </div>
     );
 };
