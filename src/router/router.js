@@ -3,8 +3,9 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
 import AddApplication from "../pages/Application/AddApplication";
-import AddApplication_second from "../pages/Application/AddApplication_second";
+import AddApplication_second from "../pages/Application/CalculateCredit";
 import UniversityPage from "../pages/UniversityPage/UniversityPage";
+import CalculateCredit from "../pages/Application/CalculateCredit";
 
 export const router = [
     {
@@ -25,8 +26,8 @@ export const router = [
         element: <AddApplication/>
     },
     {
-        path: '/application/:regionid/:cityid/:specialtyid',
-        element: <AddApplication_second/>
+        path: '/credit_calculate/:specid',
+        element: <CalculateCredit/>
     },
     {
         path: "/university/:id",

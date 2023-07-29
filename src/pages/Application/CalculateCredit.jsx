@@ -7,14 +7,6 @@ import {banks} from "./data";
 const AddApplicationSecond = () => {
     const params = useParams();
     console.log(params)
-    //{cityid:
-    // "1"
-    // regionid
-    // :
-    // "1"
-    // specialtyid
-    // :
-    // "1"
     const [sumValue, setSumValue] = useState(1);
     const [termValue, setTermValue] = useState(1);
     const [openDescr, setOpenDescr] = useState([false, false])
