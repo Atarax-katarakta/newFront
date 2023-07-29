@@ -1,10 +1,11 @@
 import React from 'react';
 import cls from "./MainPage.module.scss"
-import {Collapse, Menu, Typography} from "antd";
+import {Button, Collapse, Menu, Typography} from "antd";
 import hero from "../../assets/hero.svg"
 import Suggestions from "../../components/Suggestions/Suggestions";
 import {useGetUniversityQuery} from "../../redux/api/universityApi";
 import {Link} from "react-router-dom";
+import RecommendedCourses from "../../components/RecommendedCourses/RecommendedCourses";
 
 const {Panel} = Collapse
 const DropDown = ({title, description}) => {
@@ -83,8 +84,14 @@ const MainPage = () => {
             <div>
                 <Typography.Title>
                     Еще не определились со специальностью?
-                    <Link to={"/survey"}>Пройти опрос</Link>
                 </Typography.Title>
+                <Button>
+                    <Link to={"/survey"}>Пройти опрос</Link>
+                </Button>
+            </div>
+            <div>
+                <Typography.Title>Рекомендуемые курсы</Typography.Title>
+                <RecommendedCourses/>
             </div>
         </div>
     );

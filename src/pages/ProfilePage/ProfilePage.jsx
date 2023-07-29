@@ -7,6 +7,7 @@ import DocsInfo from "./InfoComponents/DocsInfo/DocsInfo";
 import RequiestInfo from "./InfoComponents/RequestInfo/RequiestInfo";
 import UniversityRequest from "./InfoComponents/UniversityRequest/UniversityRequest";
 import Portfolio from "./Portfolio/Portfolio";
+import BankRequest from "./InfoComponents/BankRequest/BankRequest";
 
 export function getItem(label, key, icon, children, type) {
     return {
@@ -33,7 +34,7 @@ const internalPages = [
     },
     {
         key: 4,
-        element: <UniversityRequest/>
+        element: <BankRequest/>
     },
     {
         key: 5,

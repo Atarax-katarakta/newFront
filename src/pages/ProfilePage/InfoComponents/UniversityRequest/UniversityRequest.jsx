@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Space, Table, Tag} from "antd";
+import {Link} from "react-router-dom";
 
 const UniversityRequest = () => {
     const columns = [
@@ -7,7 +8,7 @@ const UniversityRequest = () => {
             title: 'Название организации',
             dataIndex: 'name',
             key: 'name',
-            render: (text) => <a>{text}</a>,
+            render: (text) => <Link to="/university/1">{text}</Link>,
         },
         {
             title: 'Адрес',

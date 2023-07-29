@@ -39,14 +39,6 @@ const Portfolio = () => {
             begin: 2021,
             end: 2025
         },
-        {
-            key: '2',
-            name: 'Кубанский государственный аграрный университет',
-            age: 3,
-            course: 'География',
-            begin: 2020,
-            end: 2024
-        },
     ];
     return (
         <Table dataSource={dataSource} columns={columns} />
