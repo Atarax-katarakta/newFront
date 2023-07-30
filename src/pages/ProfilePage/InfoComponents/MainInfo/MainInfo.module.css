@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
 }
+
 .profile {
   display: flex;
   gap: 20px;
 }
+
 .text {
   display: flex;
   flex-direction: column;
@@ -14,7 +16,9 @@
   gap: 2px;
   font-family: Montserrat;
   color: var(--gray);
-  & span {
-    font-size: 16px;
-  }
 }
+.text span {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=MainInfo.module.css.map */

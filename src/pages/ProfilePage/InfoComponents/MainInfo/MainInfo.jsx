@@ -11,9 +11,9 @@ const MainInfo = () => {
             <div className={cls.profile}>
                 <Avatar size={128} icon={<UserOutlined/>}/>
                 <div className={cls.text}>
-                    <Title level={3}>Григорьев Иван Денисович</Title>
-                    <Text>example@gmail.com</Text>
-                    <Text>+7999999999</Text>
+                    <Title level={3} style={{fontFamily: 'Montserrat', color: 'var(--gray)'}}>Григорьев Иван Денисович</Title>
+                    <Text style={{fontFamily: 'Montserrat', color: 'var(--gray)'}}>example@gmail.com</Text>
+                    <Text style={{fontFamily: 'Montserrat', color: 'var(--gray)'}}>+7999999999</Text>
                 </div>
 
             </div>

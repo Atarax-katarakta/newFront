@@ -66,5 +66,6 @@ export const router = [
     {
         path: "/credit_form",
         element: <CreditForm/>
+
     }
 ]
