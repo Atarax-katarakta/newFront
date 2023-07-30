@@ -1,6 +1,5 @@
 import React from 'react';
 import cl from './style.module.scss'
-import arrowRight from './arrow_right.svg'
 import {Link} from "react-router-dom";
 import {ArrowRightOutlined} from "@ant-design/icons";
 

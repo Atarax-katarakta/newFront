@@ -1,9 +1,6 @@
-import mtsLogo from './logos/mts_bank.svg';
-import centerInvest from './logos/logo_center_invest.svg'
-
 export const banks = [
     {
-        logo: centerInvest,//
+        logo: '/logos/logo_center_invest.svg',//
         stavka: '13%',// ставка
         limit: 'до 300 000 ₽', // Лимит
         oplata: 'от 2 680 ₽ / месяц', //
@@ -25,7 +22,7 @@ export const banks = [
         }
     },
     {
-        logo: mtsLogo,//
+        logo: '/logos/mts_bank.svg',//
         stavka: '1,9%',// ставка
         limit: 'до 5 000 000 ₽', // Лимит
         oplata: 'от 1 684 ₽ / месяц\n', //
