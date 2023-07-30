@@ -3,18 +3,22 @@
   justify-content: space-between;
   padding: 20px 40px;
   align-items: center;
-  background: var(--secondary);
-  border-bottom: 1px solid var(--gray);
+  background: #12171F;
+  border-bottom: 1px solid var(--secondary);
   -webkit-box-shadow: 4px 5px 8px 0px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 4px 5px 8px 0px rgba(34, 60, 80, 0.2);
   box-shadow: 4px 5px 8px 0px rgba(34, 60, 80, 0.2);
+  img{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
   .info {
     display: flex;
     align-items: center;
     gap: 20px;
   }
   & a {
-    color: white;
+    color: var(--gray);
   }
 }
 

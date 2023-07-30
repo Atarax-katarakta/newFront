@@ -79,8 +79,8 @@ const Suggestions = () => {
             </Modal>
             {randomIndices.map((index, i) => (
                 <div key={index} className={cls[`child${Math.floor(Math.random() * 6) + 1}`]}>
-                    <Typography.Title>{childData[index].title}</Typography.Title>
-                    <Button onClick={showModal}>{childData[index].buttonText}</Button>
+                    <Typography.Title style={{color: 'var(--gray)'}}>{childData[index].title}</Typography.Title>
+                    <Button onClick={showModal} style={{backgroundColor: 'var(--gray)'}}>{childData[index].buttonText}</Button>
                 </div>
             ))}
         </div>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import cls from "./Navbar.module.scss"
-import logo from "../../assets/Vector.png"
+import logo from "../../assets/Vector.svg"
 import {Link} from "react-router-dom";
 import {Button, Typography} from "antd";
 

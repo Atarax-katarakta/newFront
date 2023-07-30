@@ -18,5 +18,28 @@ a {
   text-decoration: none;
 }
 body{
+
 font-family: Montserrat;
+  .ant-collapse{
+    font-family: Montserrat;
+
+    background-color: var(--secondary);
+    border: none;
+    .ant-collapse-content{
+      font-family: Montserrat;
+
+      background-color: var(--secondary);
+      color: var(--gray);
+    }
   }
+  .ant-collapse-item .ant-collapse-header span.ant-collapse-header-text {
+    font-family: Montserrat;
+
+    color: var(--gray) !important;
+  }
+  .ant-collapse-expand-icon{
+    font-family: Montserrat;
+
+    color: var(--gray);
+  }
+}

@@ -1,0 +1,49 @@
+.dropdown {
+  display: flex;
+  width: 100%;
+  background-color: var(--secondary);
+  flex-direction: column;
+  border-radius: 10px;
+}
+.dropdown .title {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gray);
+  width: 100%;
+  cursor: pointer;
+}
+.dropdown .title span {
+  font-size: 1rem;
+  font-family: Montserrat;
+  font-weight: 600;
+}
+.dropdown .description {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: Montserrat;
+  font-size: 1rem;
+}
+.dropdown .description button span {
+  font-size: 14px;
+}
+.dropdown .description .course {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=DropDown.module.css.map */

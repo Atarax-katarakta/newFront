@@ -7,7 +7,7 @@
 }
 
 .courseCard {
-  background-color: #fff;
+  background-color: var(--secondary);
   padding: 20px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.22) 1px 1px 1px 1px;
@@ -21,12 +21,14 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: var(--gray);
 }
 
 .learnMoreButton {
-  background-color: #007bff;
-  color: #fff;
+  background-color: rgba(172, 255, 53, 0.5);
+  color: var(--gray);
   border: none;
+  font-weight: 500;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;

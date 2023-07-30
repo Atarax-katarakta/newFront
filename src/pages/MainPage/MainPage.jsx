@@ -3,7 +3,6 @@ import cls from "./MainPage.module.scss"
 import {Button, Collapse, Menu, Typography} from "antd";
 import hero from "../../assets/hero.svg"
 import Suggestions from "../../components/Suggestions/Suggestions";
-import {useGetUniversityQuery} from "../../redux/api/universityApi";
 import {Link} from "react-router-dom";
 import RecommendedCourses from "../../components/RecommendedCourses/RecommendedCourses";
 import HotLine from "../../components/HotLine/HotLine";
@@ -11,9 +10,8 @@ import HotLine from "../../components/HotLine/HotLine";
 const {Panel} = Collapse
 const DropDown = ({title, description}) => {
     return (
-        <Collapse
-            size={"large"}>
-            <Panel header={title} key="1">
+        <Collapse size={"large"} style={{color: 'white !important'}}>
+            <Panel header={title} key="1" style={{color: 'white !important'}}>
                 <p>{description}</p>
             </Panel>
         </Collapse>
@@ -36,7 +34,7 @@ const MainPage = () => {
                 <Typography.Text>Выбирайте и управляйте финансовыми продуктами в одном личном кабинете</Typography.Text>
             </div>
             <div className={cls.collapse}>
-                <Typography.Title level={1}>
+                <Typography.Title level={1} style={{color: 'var(--gray)', fontFamily: 'Montserrat'}}>
                     Как работает наш сервис
                 </Typography.Title>
                 <DropDown
@@ -75,25 +73,25 @@ const MainPage = () => {
                 />
             </div>
             <div>
-                <Typography.Title level={1}>
+                <Typography.Title level={1} style={{color: 'var(--gray)', marginBottom: '30px', fontFamily: 'Montserrat'}}>
                     Акции и спецпредложения
                 </Typography.Title>
                 <Suggestions/>
             </div>
             <div>
-                <Typography.Title>
+                <Typography.Title style={{color: 'var(--gray)', marginBottom: '30px', fontFamily: 'Montserrat'}}>
                     Еще не определились со специальностью?
                 </Typography.Title>
-                <Button size={"large"}>
-                    <Link to={"/survey"}>Пройти опрос</Link>
+                <Button size={"large"} style={{width: 'max-content', height: 'max-content'}}>
+                    <Link to={"/survey"} style={{fontSize: '1.5rem'}}>Пройти опрос</Link>
                 </Button>
             </div>
             <div>
-                <Typography.Title>Рекомендуемые курсы</Typography.Title>
+                <Typography.Title style={{color: 'var(--gray)', marginBottom: '30px', fontFamily: 'Montserrat'}}>Рекомендуемые курсы</Typography.Title>
                 <RecommendedCourses/>
             </div>
             <div>
-                <Typography.Title>
+                <Typography.Title style={{color: 'var(--gray)', marginBottom: '30px', fontFamily: 'Montserrat'}}>
                     Есть вопросы? Напишите!
                 </Typography.Title>
                 <HotLine/>
