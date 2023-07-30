@@ -6,6 +6,7 @@ import Suggestions from "../../components/Suggestions/Suggestions";
 import {useGetUniversityQuery} from "../../redux/api/universityApi";
 import {Link} from "react-router-dom";
 import RecommendedCourses from "../../components/RecommendedCourses/RecommendedCourses";
+import HotLine from "../../components/HotLine/HotLine";
 
 const {Panel} = Collapse
 const DropDown = ({title, description}) => {
@@ -92,6 +93,12 @@ const MainPage = () => {
             <div>
                 <Typography.Title>Рекомендуемые курсы</Typography.Title>
                 <RecommendedCourses/>
+            </div>
+            <div>
+                <Typography.Title>
+                    Есть вопросы? Напишите!
+                </Typography.Title>
+                <HotLine/>
             </div>
         </div>
     );

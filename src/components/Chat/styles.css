@@ -1,0 +1,16 @@
+.drawerChat {
+  align-items: center;
+}
+.drawerChat .message {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.drawerChat span {
+  color: var(--gray);
+}
+.drawerChat .title img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */

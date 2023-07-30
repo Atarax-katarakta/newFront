@@ -1,0 +1,18 @@
+
+.drawerChat{
+  align-items: center;
+  .message{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+  }
+  span{
+    color: var(--gray);
+  }
+  .title{
+    img{
+      max-width: 100%;
+    }
+  }
+}

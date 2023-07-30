@@ -1,0 +1,15 @@
+.choose_application {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 60px;
+}
+.choose_application .block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.choose_application .block .link {
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.module.css.map */
