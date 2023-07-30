@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Space, Table, Tag} from "antd";
+import {Button, ConfigProvider, Space, Table, Tag} from "antd";
 import {Link} from "react-router-dom";
 
 const UniversityRequest = () => {
@@ -102,7 +102,16 @@ const UniversityRequest = () => {
 
     return (
         <div>
-            <Table columns={columns} dataSource={data}/>
+            <ConfigProvider
+                theme={{
+                    token: {
+                        colorPrimary: '#00b96b',
+                    },
+                }}
+            >
+                <Table  scroll={{x: 1000}} columns={columns} dataSource={data}/>
+
+            </ConfigProvider>
         </div>
     );
 };

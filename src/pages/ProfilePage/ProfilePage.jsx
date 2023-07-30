@@ -59,16 +59,18 @@ const ProfilePage = () => {
     const onClick = (e) => {
         setSelectedMenu(e.key)
     };
+
     return (
+
         <div className={cls.Profile}>
-            <Row style={{minHeight: "82vh"}}>
+            <Row>
                 <Col
-                    style={{minHeight: "82vh", backgroundColor: 'var(--secondary)'}}
+                    style={{backgroundColor: 'var(--white)'}}
                     span={5}
                     className={cls.menu}>
                     <div className={cls.label}>
                         <Avatar size={64} icon={<UserOutlined/>}/>
-                        <Typography.Text style={{color: 'var(--gray)', fontFamily: 'Montserrat'}}>
+                        <Typography.Text style={{color: 'black', fontFamily: 'Montserrat'}}>
                             Григорьев Иван Денисович
                         </Typography.Text>
                     </div>
@@ -78,7 +80,6 @@ const ProfilePage = () => {
                         defaultOpenKeys={['sub1']}
                         mode="inline"
                         items={items}
-                        style={{backgroundColor: 'var(--secondary)'}}
                     />
                 </Col>
                 <Col
@@ -90,7 +91,7 @@ const ProfilePage = () => {
                 </Col>
             </Row>
         </div>
-    );
+    )
 };
 
 export default ProfilePage;
