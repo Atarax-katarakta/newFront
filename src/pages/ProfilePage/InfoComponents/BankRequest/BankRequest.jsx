@@ -8,7 +8,7 @@ const BankRequest = () => {
             title: 'Название организации',
             dataIndex: 'name',
             key: 'name',
-            render: (text) => <Link to="/university/1">{text}</Link>,
+            render: (text, record) => <Link to={`/bank/${record.key}`}>{text}</Link>,
         },
         {
             title: 'Тип услуги',
@@ -61,19 +61,19 @@ const BankRequest = () => {
         },
         {
             key: '2',
-            name: 'Кубань Кредит',
-            service: "Студенческая ипотека",
-            sum: "2350000р",
-            term: "4 года",
-            answer: false
-        },
-        {
-            key: '3',
             name: 'Сбербанк',
             service: "Заем",
             sum: "50000р",
             term: "1 год",
             answer: true
+        },
+        {
+            key: '3',
+            name: 'Кубань Кредит',
+            service: "Студенческая ипотека",
+            sum: "2350000р",
+            term: "4 года",
+            answer: false
         },
 
     ];

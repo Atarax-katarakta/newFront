@@ -37,6 +37,7 @@ const UniversityPage = () => {
                                 <li key={item.id} className={cls.speciality}>
                                     <Typography.Text>
                                         {item.speciality.title}
+                                        <Tag color="blue">Математика</Tag>
                                     </Typography.Text>
                                     <Button onClick={() => showDrawer(item)} size={"small"}>Посмотреть подробнее</Button>
                                 </li>

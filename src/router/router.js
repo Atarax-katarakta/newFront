@@ -10,6 +10,7 @@ import SurveyPage from "../pages/SurveyPage/SurveyPage";
 import ChooseApplication from "../pages/ChooseApplication/ChooseApplication";
 import AddApplicationCourse from "../pages/Application/applicationCourse/AddApplicationCourse";
 import AddApplicationOnline from "../pages/Application/applicationOnline/AddApplicationOnline";
+import BankPage from "../pages/BankPage/BankPage";
 
 export const router = [
     {
@@ -56,5 +57,9 @@ export const router = [
     {
         path: "/application_online",
         element: <AddApplicationOnline/>
+    },
+    {
+        path: "bank/:id",
+        element: <BankPage/>
     }
 ]
