@@ -6,7 +6,7 @@ import {Button} from "antd";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import ApplicationCity from "./ApplicationCity";
-import ApplicationUniver from "./ApplicationUniver";
+import ApplicationOnline from "./ApplicationOnline";
 import ApplicationSpecialties from "./ApplicationSpecialties";
 import {useGetAllTownQuery} from "../../../redux/api/applicationService";
 
@@ -25,12 +25,8 @@ const AddApplicationOnline = () => {
     const [selectSpecialties, setSelectSpecialties] = useState();
     const steps = [
         {
-            value: 'step1',
-            component: <ApplicationCity setSelectFunc={(val) => setSelectCity(val)}/>
-        },
-        {
             value: 'step2',
-            component: <ApplicationUniver cityId={selectCity} setSelectFunc={(val) => setSelectUniver(val)}/>
+            component: <ApplicationOnline cityId={selectCity} setSelectFunc={(val) => setSelectUniver(val)}/>
         },
         {
             value: 'step3',
