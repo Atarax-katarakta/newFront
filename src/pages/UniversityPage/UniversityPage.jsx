@@ -48,7 +48,7 @@ const UniversityPage = () => {
                         title={selectedCourse ? selectedCourse.name : ''}
                         placement="left"
                         onClose={onClose}
-                        visible={selectedCourse !== null}
+                        open={selectedCourse !== null}
                     >
                         {selectedCourse && (
                             <div className={cls.drawer}>

@@ -12,18 +12,14 @@ const Navbar = () => {
                 <Link to={"/"}>
                     <img src={logo} alt=""/>
                 </Link>
-                <Typography.Link style={{fontFamily: 'Montserrat'}}>
-                    <Link to="/application">
-                        Подать заявку
-                    </Link>
-                </Typography.Link>
+                <Link to="/application">
+                    Подать заявку
+                </Link>
             </div>
             <div>
                 {isAuth
                     ?
-                    <Typography.Link style={{fontFamily: 'Montserrat'}}>
-                        <Link to="/profile">Профиль</Link>
-                    </Typography.Link>
+                    <Link to="/profile">Профиль</Link>
                     :
                     <Button type="danger">
                         <Link to={"/auth/login"}>Войти</Link>

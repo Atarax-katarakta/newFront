@@ -35,12 +35,10 @@ const MainPage = () => {
                 </Typography.Title>
                 <Typography.Text>Выбирайте и управляйте финансовыми продуктами в одном личном кабинете</Typography.Text>
             </div>
-            <div className={cls.stages}>
-                <Typography.Title level={2}>
+            <div className={cls.collapse}>
+                <Typography.Title level={1}>
                     Как работает наш сервис
                 </Typography.Title>
-            </div>
-            <div className={cls.collapse}>
                 <DropDown
                     title={"Заполните заявку"}
                     description={
@@ -77,7 +75,7 @@ const MainPage = () => {
                 />
             </div>
             <div>
-                <Typography.Title level={2}>
+                <Typography.Title level={1}>
                     Акции и спецпредложения
                 </Typography.Title>
                 <Suggestions/>
@@ -86,7 +84,7 @@ const MainPage = () => {
                 <Typography.Title>
                     Еще не определились со специальностью?
                 </Typography.Title>
-                <Button>
+                <Button size={"large"}>
                     <Link to={"/survey"}>Пройти опрос</Link>
                 </Button>
             </div>
