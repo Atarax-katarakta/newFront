@@ -1,10 +1,13 @@
 import React, {useState} from 'react';
-import {Button, DatePicker, Input, Radio, Select} from 'antd';
+import {Button, DatePicker, Input, Radio, Select, Upload} from 'antd';
 import cl from './creditForm.module.css'
+import ImgCrop from "antd-img-crop";
+import {Link} from "react-router-dom";
 
 const CreditForm = () => {
     const [value, setValue] = useState(1);
-    const [value1, setValue1] = useState(1)
+    const [value1, setValue1] = useState(1);
+    const [passportList, setPassportList] = useState([]);
     const onChange = (date, dateString) => {
         console.log(date, dateString);
     };
@@ -12,7 +15,21 @@ const CreditForm = () => {
     const onChange1 = (e) => {
         setValue(e.target.value);
     };
-    const onChange2 = (e) =>{
+    const onPreview = async (file) => {
+        let src = file.url;
+        if (!src) {
+            src = await new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file.originFileObj);
+                reader.onload = () => resolve(reader.result);
+            });
+        }
+        const image = new Image();
+        image.src = src;
+        const imgWindow = window.open(src);
+        imgWindow?.document.write(image.outerHTML);
+    };
+    const onChange2 = (e) => {
         setValue1(e.target.value)
     }
     const handleChange = (value) => {
@@ -32,17 +49,17 @@ const CreditForm = () => {
                 <Radio value={2}>Усыновительь</Radio>
             </Radio.Group>
             <span>Если вы явлетесь Созаемщиком/Поручителем/Законным представителем заемщика, укажите Ф.И.О. Заемщика/Основного созаемщика</span>
-            <Input placeholder="Фамилия" />
-            <Input placeholder="Имя" />
-            <Input placeholder="Отчество" />
+            <Input placeholder="Фамилия"/>
+            <Input placeholder="Имя"/>
+            <Input placeholder="Отчество"/>
             <div className={cl.title}>Персональные данные</div>
-            <Input placeholder="Фамилия" />
-            <Input placeholder="Имя" />
-            <Input placeholder="Отчество" />
+            <Input placeholder="Фамилия"/>
+            <Input placeholder="Имя"/>
+            <Input placeholder="Отчество"/>
             <span>Дата рождения</span>
-            <DatePicker onChange={onChange} />
-            <Input placeholder="Место рождения (заполните в соответствии с паспортом)" />
-            <Input placeholder="ИНН" />
+            <DatePicker onChange={onChange}/>
+            <Input placeholder="Место рождения (заполните в соответствии с паспортом)"/>
+            <Input placeholder="ИНН"/>
             <Select
                 placeholder={"Пол"}
                 style={{
@@ -61,7 +78,23 @@ const CreditForm = () => {
 
                 ]}
             />
-            <Button type='default'>Отправить</Button>
+            <ImgCrop rotationSlider>
+                <Upload
+                    action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                    listType="picture-card"
+                    fileList={passportList}
+                    onChange={({fileList: newFileList}) => {
+                        setPassportList(newFileList)
+                    }}
+                    onPreview={onPreview}
+
+                >
+                    {passportList.length < 5 && '+ Upload'}
+                </Upload>
+            </ImgCrop>
+            <Button type='default'>
+                <Link to={"/credit_calculate"}>Перейти в калькулятор</Link>
+            </Button>
         </div>
     );
 };

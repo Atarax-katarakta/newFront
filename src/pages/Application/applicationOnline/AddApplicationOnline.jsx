@@ -30,7 +30,8 @@ const AddApplicationOnline = () => {
         },
         {
             value: 'step3',
-            component: <ApplicationSpecialties setSelectFunc={(val) => setSelectSpecialties(val)} univerId={selectUniver}/>
+            component: <ApplicationSpecialties setSelectFunc={(val) => setSelectSpecialties(val)}
+                                               univerId={selectUniver}/>
         }
     ]
     const [numberStep, setNumber] = useState(0)
@@ -39,18 +40,12 @@ const AddApplicationOnline = () => {
             <div className='h1'>Анкета для подачи заявки на онлайн образование</div>
             {steps[numberStep].component}
             {
-                numberStep === 0 ? selectCity ? <Button onClick={() => setNumber(numberStep + 1)}>Далее</Button>
-                        : <div></div>
-                    : numberStep === 1 ? selectUniver ?
-                            <Button onClick={() => setNumber(numberStep + 1)}>Далее</Button>
-                            : <div></div>
-                        : numberStep === 2 ? selectCity && selectUniver && selectSpecialties ?
-                                <div className='links'>
-                                    <Link to={"/upload"}>Отправить заявку в учебное учреждение на бюджетной основе</Link>
-                                    <Link to={"/credit_calculate"}>Посмотреть варианты кредитов и шанс одобрения+</Link>
-                                </div>
-                                : <div></div>
-                            : <div></div>
+                numberStep === 0 ? <Button onClick={() => setNumber(numberStep + 1)}>Далее</Button>
+                    : numberStep === 1 &&
+                    <div className='links'>
+                        <Link to={"/credit_form"}>Посмотреть варианты кредитов и шанс одобрения+</Link>
+                    </div>
+
             }
         </div>
     );

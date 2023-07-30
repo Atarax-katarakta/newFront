@@ -11,6 +11,7 @@ import ChooseApplication from "../pages/ChooseApplication/ChooseApplication";
 import AddApplicationCourse from "../pages/Application/applicationCourse/AddApplicationCourse";
 import AddApplicationOnline from "../pages/Application/applicationOnline/AddApplicationOnline";
 import BankPage from "../pages/BankPage/BankPage";
+import CreditForm from "../pages/Application/CreditForm";
 
 export const router = [
     {
@@ -59,7 +60,11 @@ export const router = [
         element: <AddApplicationOnline/>
     },
     {
-        path: "bank/:id",
+        path: "/bank/:id",
         element: <BankPage/>
+    },
+    {
+        path: "/credit_form",
+        element: <CreditForm/>
     }
 ]
