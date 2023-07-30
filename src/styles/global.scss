@@ -43,3 +43,9 @@ font-family: Montserrat;
     color: var(--gray);
   }
 }
+:where(.css-dev-only-do-not-override-txh9fw).ant-menu-light .ant-menu-submenu-selected >.ant-menu-submenu-title, :where(.css-dev-only-do-not-override-txh9fw).ant-menu-light>.ant-menu .ant-menu-submenu-selected >.ant-menu-submenu-title{
+  color: var(--primary)
+}
+:where(.css-dev-only-do-not-override-txh9fw).ant-menu-light .ant-menu-item-selected{
+  background-color: var(--gray);
+}

@@ -63,12 +63,12 @@ const ProfilePage = () => {
         <div className={cls.Profile}>
             <Row style={{minHeight: "82vh"}}>
                 <Col
-                    style={{minHeight: "82vh"}}
+                    style={{minHeight: "82vh", backgroundColor: 'var(--secondary)'}}
                     span={5}
                     className={cls.menu}>
                     <div className={cls.label}>
                         <Avatar size={64} icon={<UserOutlined/>}/>
-                        <Typography.Text>
+                        <Typography.Text style={{color: 'var(--gray)', fontFamily: 'Montserrat'}}>
                             Григорьев Иван Денисович
                         </Typography.Text>
                     </div>
@@ -78,6 +78,7 @@ const ProfilePage = () => {
                         defaultOpenKeys={['sub1']}
                         mode="inline"
                         items={items}
+                        style={{backgroundColor: 'var(--secondary)'}}
                     />
                 </Col>
                 <Col

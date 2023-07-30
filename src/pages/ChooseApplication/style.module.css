@@ -8,7 +8,10 @@
   align-items: center;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
-  text-decoration: underline;
+  gap: 10px;
+}
+.choose_application .block a {
+  color: #000;
 }
 
 /*# sourceMappingURL=style.module.css.map */
