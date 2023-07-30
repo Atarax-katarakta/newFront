@@ -3,7 +3,7 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 
 export const applicationService = createApi({
     reducerPath: 'applicationService',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://80.78.255.50/'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://ats.k-lab.su/'}),
     endpoints: (builder) => ({
         getAllTown: builder.query({
             query: (arg)=>'cities/?limit=1000'
