@@ -1,6 +1,6 @@
 import React from 'react';
-import SelectSearch from "../../components/SelectSearch/SelectSearch";
-import {useGetSpecialtyByUniverQuery} from "../../redux/api/applicationService";
+import SelectSearch from "../../../components/SelectSearch/SelectSearch";
+import {useGetSpecialtyByUniverQuery} from "../../../redux/api/applicationService";
 
 const ApplicationSpecialties = ({setSelectFunc, univerId}) => {
     const {data, error, isLoading} = useGetSpecialtyByUniverQuery(univerId)

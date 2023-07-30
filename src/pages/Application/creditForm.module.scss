@@ -1,0 +1,12 @@
+.credit_form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .title{
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-weight: 600;
+  }
+
+}

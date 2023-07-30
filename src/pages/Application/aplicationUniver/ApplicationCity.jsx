@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import SelectSearch from "../../components/SelectSearch/SelectSearch";
-import {useGetAllTownQuery} from "../../redux/api/applicationService";
+import SelectSearch from "../../../components/SelectSearch/SelectSearch";
+import {useGetAllTownQuery} from "../../../redux/api/applicationService";
 
 const ApplicationCity = ({setSelectFunc}) => {
     const {data, error, isLoading} = useGetAllTownQuery();

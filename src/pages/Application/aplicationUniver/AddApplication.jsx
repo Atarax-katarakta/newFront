@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import './style.css';
-import SelectSearch from "../../components/SelectSearch/SelectSearch";
-import DropDown from "../../components/DropDown/DropDown";
+import SelectSearch from "../../../components/SelectSearch/SelectSearch";
+import DropDown from "../../../components/DropDown/DropDown";
 import {Button} from "antd";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import ApplicationCity from "./ApplicationCity";
 import ApplicationUniver from "./ApplicationUniver";
 import ApplicationSpecialties from "./ApplicationSpecialties";
-import {useGetAllTownQuery} from "../../redux/api/applicationService";
+import {useGetAllTownQuery} from "../../../redux/api/applicationService";
 
 class UniversityService {
     static async getAll() {
@@ -40,7 +40,7 @@ const AddApplication = () => {
     const [numberStep, setNumber] = useState(0)
     return (
         <div className='page_application_first'>
-            <div className='h1'>Анкета</div>
+            <div className='h1'>Анкета для подачи заявки в учебное учреждение</div>
             {steps[numberStep].component}
             {
                 numberStep === 0 ? selectCity ? <Button onClick={() => setNumber(numberStep + 1)}>Далее</Button>
@@ -50,7 +50,6 @@ const AddApplication = () => {
                             : <div></div>
                         : numberStep === 2 ? selectCity && selectUniver && selectSpecialties ?
                                 <div className='links'>
-                                    <Link to={"/upload"}>Отправить заявку в учебное учреждение на бюджетной основе</Link>
                                     <Link to={"/credit_calculate"}>Посмотреть варианты кредитов и шанс одобрения+</Link>
                                 </div>
                                 : <div></div>

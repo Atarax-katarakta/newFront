@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {useParams} from "react-router-dom";
-import './style.css';
+import './aplicationUniver/style.css';
 import {Button, InputNumber, Slider} from "antd";
-import {banks} from "./data";
+import {banks} from "./aplicationUniver/data";
 
 const AddApplicationSecond = () => {
     const params = useParams();

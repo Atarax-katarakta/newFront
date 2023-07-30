@@ -2,12 +2,14 @@ import MainPage from "../pages/MainPage/MainPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
-import AddApplication from "../pages/Application/AddApplication";
-import AddApplication_second from "../pages/Application/CalculateCredit";
+import AddApplication from "../pages/Application/aplicationUniver/AddApplication";
 import UniversityPage from "../pages/UniversityPage/UniversityPage";
 import CalculateCredit from "../pages/Application/CalculateCredit";
 import UploadFiles from "../pages/Application/UploadFiles";
 import SurveyPage from "../pages/SurveyPage/SurveyPage";
+import ChooseApplication from "../pages/ChooseApplication/ChooseApplication";
+import AddApplicationCourse from "../pages/Application/applicationCourse/AddApplicationCourse";
+import AddApplicationOnline from "../pages/Application/applicationOnline/AddApplicationOnline";
 
 export const router = [
     {
@@ -25,7 +27,7 @@ export const router = [
     },
     {
         path: '/application',
-        element: <AddApplication/>
+        element: <ChooseApplication/>
     },
     {
         path: '/credit_calculate',
@@ -42,5 +44,17 @@ export const router = [
     {
         path: "/survey",
         element: <SurveyPage/>
+    },
+    {
+        path: "/application_univer",
+        element: <AddApplication/>
+    },
+    {
+        path: "/application_course",
+        element: <AddApplicationCourse/>
+    },
+    {
+        path: "/application_online",
+        element: <AddApplicationOnline/>
     }
 ]
